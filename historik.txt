@@ -1,0 +1,30 @@
+historik.txt
+
+---
+ 7381  ansible-playbook ./site.yml --ask-pass --ask-become-pass -i ./inventory/my-cluster/hosts.ini
+ 7383  scp simon@172.16.1.250:~/.kube/config ~/.kube/config
+ 7384  k get nodes
+ 7385  ssh 172.16.1.250
+ 7386  helm repo update
+ 7387  k get namespaces
+ 7388  kubectl create namespace cattle-system
+ 7389  helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
+ 7390  helm repo add jetstack https://charts.jetstack.io
+ 7391  helm repo update
+ 7392  k get namespaces
+ 7393  helm install cert-manager jetstack/cert-manager \\n  --namespace cert-manager \\n  --create-namespace \\n  --version v1.11.0
+ 7394  ansible-playbook ./reset.yml --ask-pass --ask-become-pass -i ./inventory/my-cluster/hosts.ini
+ 7395  ansible-playbook ./rebootyml --ask-pass --ask-become-pass -i ./inventory/my-cluster/hosts.ini
+ 7396  ansible-playbook ./reboot.yml --ask-pass --ask-become-pass -i ./inventory/my-cluster/hosts.ini
+ 7397  ansible-playbook ./site.yml --ask-pass --ask-become-pass -i ./inventory/my-cluster/hosts.ini
+ 7398  scp simon@172.16.1.250:~/.kube/config ~/.kube/config
+ 7399  k get nodes
+ 7400  k get namespaces
+ 7401  kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
+ 7402  helm repo add jetstack https://charts.jetstack.io
+ 7403  helm repo update
+ 7404  helm install cert-manager jetstack/cert-manager \\n  --namespace cert-manager \\n  --create-namespace \\n  --version v1.11.0
+ 7405  kubectl get pods --namespace cert-manager
+ 7406  helm install rancher rancher-stable/rancher \\n  --namespace cattle-system \\n  --set hostname=rancher.rubbat.se
+ 7407  ansible-playbook ./reset.yml --ask-pass --ask-become-pass -i ./inventory/my-cluster/hosts.ini
+ 7408  ansible-playbook ./reboot.yml --ask-pass --ask-become-pass -i ./inventory/my-cluster/hosts.ini
